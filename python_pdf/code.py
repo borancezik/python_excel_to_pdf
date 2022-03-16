@@ -8,7 +8,10 @@ from win32com import client
 word_app = client.Dispatch("Word.Application")
 
 sayı1 = 4.376
+#burada data dosyasını import eder
 data_frame = pd.read_excel("data2.xlsx")
+
+#bu döngüde ise teker teker ilk olarak word dosyalarını daha sonra da pdf dosyalarını oluşturur.
 
 for r_index, row in data_frame.iterrows():
     cust_name = row['FİRMA_ADI']
